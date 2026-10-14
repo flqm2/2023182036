@@ -24,7 +24,7 @@ class Boy:
 
 class Ball:
     def __init__(self):
-        self.x, self.y = 100, 100
+        self.x, self.y = random.randint(100, 700), 90
         self.frame = 0
         self.image = load_image('ball41x41.png')
     def update(self):
