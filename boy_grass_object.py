@@ -54,8 +54,8 @@ def reset_world():
         team = [Boy() for i in range(11)]
         world += team
 
-        ball= Ball()
-        world.append(ball)
+        bollon = [Ball() for i in range(20)]
+        world += bollon
 def update_world():
     for o in world:
         o.update()
