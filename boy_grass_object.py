@@ -27,8 +27,9 @@ class Ball:
         self.x, self.y = random.randint(100, 700), 90
         self.frame = random.randint(3, 6)
         self.image = load_image('ball41x41.png')
-        self.frame_width = random.randint(self.image.w, self.image.w + 10)
-        self.frame_hight = random.randint(self.image.h, self.image.h + 10)
+        size = random.randint(1, 20)
+        self.frame_width = self.image.w + size
+        self.frame_hight = self.image.h + size
     def update(self):
         if self.y < 580:
             self.y += self.frame
