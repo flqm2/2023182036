@@ -22,11 +22,11 @@ class Boy:
     def draw(self):
         self.image.clip_draw(self.frame * 100, 100, 100, 100, self.x, self.y)
 
-class Zombie:
+class Ball:
     def __init__(self):
         self.x, self.y = 100, 170
         self.frame = 0
-        self.image = load_image('zombie_run_animation.png')
+        self.image = load_image('ball41x41.png')
     def update(self):
         self.frame = (self.frame + 1) % 10
         self.x += 5
@@ -56,8 +56,8 @@ def reset_world():
         team = [Boy() for i in range(11)]
         world += team
 
-        zombie= Zombie()
-        world.append(zombie)
+        ball= Ball()
+        world.append(ball)
 def update_world():
     for o in world:
         o.update()
