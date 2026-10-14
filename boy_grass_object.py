@@ -28,7 +28,11 @@ class Ball:
         self.frame = random.randint(3, 6)
         self.image = load_image('ball41x41.png')
     def update(self):
-        self.y += self.frame
+        if self.y < 580:
+            self.y += self.frame
+        else:
+            while self.y >= 570:
+                self.y -= 2
         self.y = max(50, min(self.y, 580))
     def draw(self):
         self.image.clip_draw(0, 0, 41, 41, self.x, self.y)
